@@ -5,10 +5,6 @@ package fr.ppptours.cafetaria.model.tags;
  */
 public class YearTag extends Tag {
 
-    /**
-     * Constructor
-     * @param tagName name for the created tag
-     */
     public YearTag(String tagName) {
         super(tagName);
     }

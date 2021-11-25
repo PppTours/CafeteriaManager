@@ -10,24 +10,20 @@ public abstract class Tag {
      */
     private String tagName;
 
-    /**
-     * general constructor
-     * @param tagName name for the created tag
-     */
     public Tag(String tagName) {
         this.tagName = tagName;
     }
 
     /**
-     * @return the tagName
+     * @return The tagName
      */
     public String getTagName() {
         return tagName;
     }
 
     /**
-     * set a new tag Name
-     * @param tagName new tag name to set
+     * Set a new tag Name
+     * @param tagName New tag name to set
      */
     public void setTagName(String tagName) {
         this.tagName = tagName;
