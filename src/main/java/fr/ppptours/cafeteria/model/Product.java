@@ -1,7 +1,9 @@
-package fr.ppptours.main;
+package fr.ppptours.cafeteria.model;
 
-import java.lang.String;
+import fr.ppptours.cafeteria.model.tags.ProductTag;
+
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Product class represents a product sold by the cafeteria
@@ -14,12 +16,12 @@ public class Product {
     /**
      * The list of the products tags
      */
-    private ArrayList<ProductTag> tags;
+    private List<ProductTag> tags;
 
     /**
      * Creates a Product with the name and list of tags entered as parameters
      * @param name The Products name
-     * @param ProductTags ArrayList containing all the tags the Product will have
+     * @param tags ArrayList containing all the tags the Product will have
      */
     public Product(String name, ArrayList<ProductTag> tags) {
         this.name = name;
@@ -33,11 +35,8 @@ public class Product {
         this.name = newName;
     }
 
-    public ArrayList<ProductTag> getTags(){
+    public Iterable<ProductTag> getTags(){
         return tags;
-    }
-    public void setTags(ArrayList<ProductTag> newTags){
-        tags = newTags;
     }
 
     /**
@@ -54,9 +53,8 @@ public class Product {
      * @param newTags an ArrayList containing the tags you want to add
      */
     public void addTags(ArrayList<ProductTag> newTags){
-        ArrayList<ProductTag> tempTags = newTags;
-        tempTags.removeAll(tags);
-        tags.addAll(tempTags);
+        newTags.removeAll(tags);
+        tags.addAll(newTags);
     }
 
     /**
@@ -70,9 +68,7 @@ public class Product {
      * Removes the entered tags from the Products list of tags
      * @param remTags An ArrayList containing the tags you want to remove
      */
-    public void removeTags(ArrayList<ProductTags> remTags){
+    public void removeTags(ArrayList<ProductTag> remTags){
         tags.removeAll(remTags);
     }
-    }
-
 }
