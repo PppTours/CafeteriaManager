@@ -19,7 +19,7 @@ public abstract class Tag {
     }
 
     /**
-     * Set a new tag Name
+     * Sets a new tag Name
      * @param tagName New tag name to set
      */
     public void setTagName(String tagName) {
