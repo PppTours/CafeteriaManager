@@ -1,7 +1,7 @@
 package fr.ppptours.cafetaria.model.tags;
 
 /**
- * Abstract class for all tags
+ * Base class for tags.
  */
 public abstract class Tag {
 
@@ -14,9 +14,6 @@ public abstract class Tag {
         this.tagName = tagName;
     }
 
-    /**
-     * @return The tagName
-     */
     public String getTagName() {
         return tagName;
     }
