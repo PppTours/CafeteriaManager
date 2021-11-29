@@ -2,20 +2,20 @@ package fr.ppptours.cafeteria.model;
 
 import fr.ppptours.cafeteria.model.tags.ProductTag;
 
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
+import java.util.Collection;
+
 
 /**
  * Product class represents a product sold by the cafeteria
  */
-public class Product {
+public class Product{
     /**
      * The name of the product
      */
     private String name;
     /**
-     * The list of the products tags
+     * The list of the products tags, this list is not meant to be modified outside of this Classes methods
      */
     private List<ProductTag> tags;
 
@@ -26,7 +26,7 @@ public class Product {
      */
     public Product(String name, Collection<ProductTag> tags) {
         this.name = name;
-        this.tags = new ArrayList<>(tags);
+        this.tags = (List<ProductTag>) tags;
     }
 
     public String getName() {
@@ -36,9 +36,10 @@ public class Product {
         this.name = newName;
     }
 
-    public Iterable<ProductTag> getTags(){
+    public List<ProductTag> getTags(){
         return tags;
     }
+
 
     /**
      * Adds the entered tag into the Products list of tags
