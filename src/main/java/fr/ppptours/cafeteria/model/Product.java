@@ -3,6 +3,7 @@ package fr.ppptours.cafeteria.model;
 import fr.ppptours.cafeteria.model.tags.ProductTag;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -21,11 +22,11 @@ public class Product {
     /**
      * Creates a Product with the name and list of tags entered as parameters
      * @param name The Products name
-     * @param tags ArrayList containing all the tags the Product will have
+     * @param tags Collection containing all the tags the Product will have
      */
-    public Product(String name, ArrayList<ProductTag> tags) {
+    public Product(String name, Collection<ProductTag> tags) {
         this.name = name;
-        this.tags = tags;
+        this.tags = new ArrayList<>(tags);
     }
 
     public String getName() {
@@ -50,9 +51,9 @@ public class Product {
      * Adds the entered tags to the Products list of tags
      * If newTags contains a tag that is already in the Products tag list, it will not get added
      * (this prevents duplicate tags)
-     * @param newTags an ArrayList containing the tags you want to add
+     * @param newTags A List containing the tags you want to add
      */
-    public void addTags(ArrayList<ProductTag> newTags){
+    public void addTags(Collection<ProductTag> newTags){
         newTags.removeAll(tags);
         tags.addAll(newTags);
     }
@@ -66,9 +67,9 @@ public class Product {
     }
     /**
      * Removes the entered tags from the Products list of tags
-     * @param remTags An ArrayList containing the tags you want to remove
+     * @param remTags A Collection containing the tags you want to remove
      */
-    public void removeTags(ArrayList<ProductTag> remTags){
+    public void removeTags(Collection<ProductTag> remTags){
         tags.removeAll(remTags);
     }
 }
