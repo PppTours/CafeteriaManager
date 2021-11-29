@@ -2,8 +2,8 @@ package fr.ppptours.cafeteria.model;
 
 import fr.ppptours.cafeteria.model.tags.ProductTag;
 
-import java.util.List;
 import java.util.Collection;
+import java.util.List;
 
 
 /**
@@ -15,7 +15,7 @@ public class Product{
      */
     private String name;
     /**
-     * The list of the products tags, this list is not meant to be modified outside of this Classes methods
+     * The list of the products tags, this list is not meant to be modified outside this Classes methods
      */
     private List<ProductTag> tags;
 
