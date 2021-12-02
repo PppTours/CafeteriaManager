@@ -5,8 +5,8 @@ package fr.ppptours.cafeteria.model.tags;
  */
 public class ProductTag extends Tag {
 
-    public ProductTag(String tagName) {
-        super(tagName);
+    public ProductTag(int id, String tagName) {
+        super(id, tagName);
     }
 
 }
