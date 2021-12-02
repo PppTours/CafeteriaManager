@@ -3,6 +3,7 @@ package fr.ppptours.cafeteria.model;
 import fr.ppptours.cafeteria.model.tags.ProductTag;
 
 import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -45,9 +46,13 @@ public class Product{
         this.name = newName;
     }
 
-
+    /**
+     * Returns the list of tags of the current product
+     * it returns an iterable
+     * @return an Iterable containing all the current Products tags
+     */
     public List<ProductTag> getTags(){
-        return tags;
+        return Collections.unmodifiableList(tags);
     }
 
 
