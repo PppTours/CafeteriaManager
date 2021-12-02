@@ -52,19 +52,16 @@ public class Product{
      * @return an Iterable containing all the current Products tags
      */
     public List<ProductTag> getTags(){
-        return Collections.unmodifiableList(tags) ;
+        return Collections.unmodifiableList(tags);
     }
 
 
     /**
      * Adds the entered tag into the Products list of tags
-     * If the entered tag is already in the list of tags, it will not get added
      * @param newTag The ProductTag you want to add to the list
      */
     public void addTag(ProductTag newTag) {
-        if (!tags.contains(newTag)){
-            tags.add(newTag);
-        }
+        tags.add(newTag);
     }
     /**
      * Adds the entered tags to the Products list of tags
