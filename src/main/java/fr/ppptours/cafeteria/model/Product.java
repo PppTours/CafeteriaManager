@@ -20,7 +20,15 @@ public class Product{
     private List<ProductTag> tags;
 
     /**
-     * Creates a Product with the name and list of tags entered as parameters
+     * Creates a Product with the name entered as a parameter, the tags list will be empty after creation
+     * @param name The Products name
+     */
+    public Product(String name) {
+        this.name = name;
+    }
+
+    /**
+     * Comfort constructor that creates a Product with the name and list of tags entered as parameters
      * @param name The Products name
      * @param tags Collection containing all the tags the Product will have
      */
@@ -32,9 +40,11 @@ public class Product{
     public String getName() {
         return name;
     }
+
     public void setName(String newName){
         this.name = newName;
     }
+
 
     public List<ProductTag> getTags(){
         return tags;
