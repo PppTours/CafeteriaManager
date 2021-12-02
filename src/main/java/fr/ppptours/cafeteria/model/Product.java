@@ -61,7 +61,9 @@ public class Product{
      * @param newTag The ProductTag you want to add to the list
      */
     public void addTag(ProductTag newTag) {
-        tags.add(newTag);
+        if (!tags.contains(newTag)){
+            tags.add(newTag);
+        }
     }
     /**
      * Adds the entered tags to the Products list of tags
