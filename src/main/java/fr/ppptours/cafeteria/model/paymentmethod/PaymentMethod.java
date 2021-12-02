@@ -61,27 +61,16 @@ public class PaymentMethod {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-
-        if(o instanceof Integer){
-            int idToCompare = (int) o;
-            return equals(idToCompare);
-        }
-
         if (o == null || getClass() != o.getClass()) return false;
-        
 
         PaymentMethod that = (PaymentMethod) o;
-
-        if (id != that.id) return false;
-        return name != null ? name.equals(that.name) : that.name == null;
+        return equals(that);
     }
+
     /**
-     * checks if a given id is the same as the object's
-     * @param idToCompare the payment method id to compare to
-     * @return true if the payment method is the same, false otherwise
+     * Checks if two payment methods are equal.
      */
-    protected boolean equals(int idToCompare){
-        return idToCompare == id;
+    protected boolean equals(PaymentMethod otherMethod){
+        return this.id == otherMethod.id;
     }
-
 }
