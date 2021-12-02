@@ -9,7 +9,7 @@ public class PaymentMethod {
     /**
      * The payment method id
      */
-    private String id;
+    private int id;
 
     /**
      * The payment method name
@@ -21,12 +21,12 @@ public class PaymentMethod {
      * Creates a payment method from a given string
      * @param name The payment method as a string
      */
-    public PaymentMethod(String id, String name) {
+    public PaymentMethod(int id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
@@ -34,7 +34,7 @@ public class PaymentMethod {
         return name;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -54,32 +54,34 @@ public class PaymentMethod {
 
     /**
      * Checks if the payment method is the same as the one given
-     * If a payment method is a string, it will be compared to the id
+     * If a payment method is an int/Integer, it will be compared to the id
      * @param o the payment method to compare to
      * @return true if the payment method is the same, false otherwise
      */
     @Override
     public boolean equals(Object o) {
+        if (this == o) return true;
 
-        if(o instanceof String){
-            return equals((String) o);
+        if(o instanceof Integer){
+            int idToCompare = (int) o;
+            return equals(idToCompare);
         }
 
-        if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+        
 
         PaymentMethod that = (PaymentMethod) o;
 
-        return id != null ? id.equals(that.id) : that.id == null;
+        if (id != that.id) return false;
+        return name != null ? name.equals(that.name) : that.name == null;
     }
-
     /**
-     * checks if a given string is the same as the object's id
+     * checks if a given id is the same as the object's
      * @param idToCompare the payment method id to compare to
      * @return true if the payment method is the same, false otherwise
      */
-    protected boolean equals(String idToCompare){
-        return this.id.equalsIgnoreCase(idToCompare);
+    protected boolean equals(int idToCompare){
+        return idToCompare == id;
     }
 
 }
