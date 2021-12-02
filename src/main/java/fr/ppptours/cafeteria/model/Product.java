@@ -52,7 +52,7 @@ public class Product{
      * @return an Iterable containing all the current Products tags
      */
     public List<ProductTag> getTags(){
-        return Collections.unmodifiableList(tags);
+        return Collections.unmodifiableList(tags) ;
     }
 
 
