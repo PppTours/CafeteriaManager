@@ -58,6 +58,7 @@ public class Product{
 
     /**
      * Adds the entered tag into the Products list of tags
+     * If the entered tag is already in the list of tags, it will not get added
      * @param newTag The ProductTag you want to add to the list
      */
     public void addTag(ProductTag newTag) {
