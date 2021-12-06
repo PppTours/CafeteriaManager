@@ -29,7 +29,7 @@ public abstract class Tag {
      * Sets a new tag id
      * @param id New tag id to set
      */
-    public void setId(int id) {
+    protected void setId(int id) {
         this.id = id;
     }
 
