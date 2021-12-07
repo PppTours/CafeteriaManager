@@ -6,12 +6,31 @@ package fr.ppptours.cafeteria.model.tags;
 public abstract class Tag {
 
     /**
+     * The tag's id
+     */
+    private int id;
+
+    /**
      * The tag name, used to identify the tag
      */
     private String tagName;
 
-    public Tag(String tagName) {
+
+    public Tag(int id, String tagName) {
+        this.id = id;
         this.tagName = tagName;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    /**
+     * Sets a new tag id
+     * @param id New tag id to set
+     */
+    protected void setId(int id) {
+        this.id = id;
     }
 
     public String getTagName() {

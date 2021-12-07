@@ -5,7 +5,7 @@ package fr.ppptours.cafeteria.model.tags;
  */
 public class YearTag extends Tag {
 
-    public YearTag(String tagName) {
-        super(tagName);
+    public YearTag(int id, String tagName) {
+        super(id, tagName);
     }
 }
