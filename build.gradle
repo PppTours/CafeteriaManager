@@ -6,7 +6,7 @@ plugins {
 apply plugin: 'java'
 apply plugin: 'application'
 
-mainClassName = 'fr.ppptours.cafeteria.HelloWorld'
+mainClassName = 'fr.ppptours.cafeteria.api.SheetsQuickstart'
 sourceCompatibility = 16.0
 targetCompatibility = 16.0
 version = '1.0'
