@@ -5,7 +5,25 @@ package fr.ppptours.cafeteria.model.tags;
  */
 public class YearTag extends Tag {
 
+    /**
+     * the next year the client will be in
+     */
+    private YearTag nextYear;
+
+    public YearTag(int id, String tagName, YearTag nextYear){
+        super(id, tagName);
+        this.nextYear = nextYear;
+    }
+
     public YearTag(int id, String tagName) {
         super(id, tagName);
+    }
+
+    public YearTag getNextYear(){
+        return nextYear;
+    }
+
+    public void setNextYear(YearTag nextYear){
+        this.nextYear = nextYear;
     }
 }
