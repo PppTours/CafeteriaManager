@@ -34,8 +34,8 @@ public class Product{
      * @param tags Collection containing all the tags the Product will have
      */
     public Product(String name, Collection<ProductTag> tags) {
-        this.name = name;
-        this.tags = (List<ProductTag>) tags;
+        new Product(name);
+        this.addTags(tags);
     }
 
     public String getName() {
