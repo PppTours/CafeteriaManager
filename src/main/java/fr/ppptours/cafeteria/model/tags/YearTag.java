@@ -6,7 +6,7 @@ package fr.ppptours.cafeteria.model.tags;
 public class YearTag extends Tag {
 
     /**
-     * the next year the client will be in
+     * The next year the client will be in
      */
     private YearTag nextYear;
 
