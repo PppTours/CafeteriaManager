@@ -5,7 +5,7 @@ import fr.ppptours.cafeteria.model.tags.ProductTag;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
-
+import java.util.ArrayList;
 
 /**
  * Product class represents a product sold by the cafeteria
@@ -26,6 +26,7 @@ public class Product{
      */
     public Product(String name) {
         this.name = name;
+        tags = new ArrayList<>();
     }
 
     /**
@@ -34,8 +35,8 @@ public class Product{
      * @param tags Collection containing all the tags the Product will have
      */
     public Product(String name, Collection<ProductTag> tags) {
-        new Product(name);
-        this.addTags(tags);
+        this(name);
+        addTags(tags);
     }
 
     public String getName() {
@@ -43,7 +44,7 @@ public class Product{
     }
 
     public void setName(String newName){
-        this.name = newName;
+        name = newName;
     }
 
     /**
