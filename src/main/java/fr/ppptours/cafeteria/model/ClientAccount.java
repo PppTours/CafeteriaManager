@@ -36,10 +36,30 @@ public class ClientAccount {
      */
     private YearTag currentYearTag;
 
+    /**
+     * Constructor for a new client account.
+     * @param firstName First name of the client.
+     * @param lastName Last name of the client.
+     * @param personTags Tags for the client's information, like if he's a student, working in the cafeteria, etc.
+     * @param currentYearTag Tag representing the current year the client is in (like 3rd year, 4th year, etc.).
+     */
     public ClientAccount(String firstName, String lastName, Collection<PersonTag> personTags, YearTag currentYearTag) {
+        this(firstName, lastName, personTags, currentYearTag, new Balance());
+    }
+
+
+    /**
+     * Constructor for a new client account, using an existing balance.
+     * @param firstName First name of the client.
+     * @param lastName Last name of the client.
+     * @param personTags Tags for the client's information, like if he's a student, working in the cafeteria, etc.
+     * @param currentYearTag Tag representing the current year the client is in (like 3rd year, 4th year, etc.).
+     * @param existingBalance Existing balance of the client.
+     */
+    public ClientAccount(String firstName, String lastName, Collection<PersonTag> personTags, YearTag currentYearTag, Balance existingBalance) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.clientBalance = new Balance();
+        this.clientBalance = new Balance(existingBalance);
         this.personTagManager = new TagManager<>();
         this.personTagManager.addTags(personTags);
         this.currentYearTag = currentYearTag;
