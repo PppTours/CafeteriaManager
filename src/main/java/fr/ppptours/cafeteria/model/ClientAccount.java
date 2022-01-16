@@ -3,7 +3,7 @@ package fr.ppptours.cafeteria.model;
 import fr.ppptours.cafeteria.model.tags.PersonTag;
 import fr.ppptours.cafeteria.model.tags.TagManager;
 import fr.ppptours.cafeteria.model.tags.YearTag;
-import java.util. ArrayList;
+import java.util.ArrayList;
 import java.util.Collection;
 
 /**
