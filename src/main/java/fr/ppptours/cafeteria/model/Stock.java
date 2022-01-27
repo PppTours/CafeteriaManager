@@ -15,7 +15,7 @@ public class Stock {
      * Creates an empty new Stock object
      */
     public Stock() {
-        products = new HashMap<Product, Integer>();
+        products = new HashMap<>();
     }
 
     /**
@@ -40,17 +40,12 @@ public class Stock {
     }
 
     /**
-     * Adds all of the entered Products to the Stock with the specified quantities
+     * Adds all of the entered Products to the Stock in the specified quantities
      * @param newProducts a Map of the products you want to add to the Stock and the amounts you want to add
      */
     public void addProducts(Map<Product,Integer> newProducts){
         for(Product currentProduct : newProducts.keySet()){
-            if (products.containsKey(currentProduct)){
-                products.put(currentProduct,products.get(currentProduct)+newProducts.get(currentProduct));
-            }
-            else{
-                products.put(currentProduct,newProducts.get(currentProduct));
-            }
+            addProduct(currentProduct,newProducts.get(currentProduct));
         }
     }
 
